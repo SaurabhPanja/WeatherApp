@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather App</title>
+</head>
+<body>
+  <%=currentTemp - 273.15%>
+  <%=main%>
+  <%=description%>
+  <%=maxTemp- 273.15%>
+  <%=minTemp- 273.15%>
+  <%=windSpeed%>
+  <%=windDegree%>
+  <%=clouds%>
+  <%=sunrise%>
+  <%=sunset%>
+  <%=city%>
+  <p  id="sunrise"></p>
+  <p id="sunset"></p>
+  <script src="main.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  document.querySelector('#sunrise').innerHTML = getTime(<%=sunrise%>);
+  document.querySelector('#sunset').innerHTML = getTime(<%=sunset%>);
+
+  </script>
+</body>
+</html>
